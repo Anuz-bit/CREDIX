@@ -125,7 +125,7 @@ CREDIX is **predictive**. It acts on signals, not events.
 
 ### 🤖 Layer 1 — AI & Data Pipeline
 
-![CREDIX ML Architecture](Architeture.png)
+![CREDIX ML Architecture](assets__/Architeture.png)
 
 > **Reading the diagram left to right:**
 > Raw CSV data enters the **Data Layer** → Python/NumPy/Pandas/Feast compute behavioral features in the **Feature Engineering Layer** → Three models (Random Forest, XGBoost, Logistic Regression) run in parallel in the **Model Layer** → Their outputs are combined by the **Meta Ensemble Layer** → **SHAP** explains every decision → The **Risk Scoring Engine** assigns a Risk Band → **SMS, Mail, and App notifications** fire automatically → The **Customer** receives a plan via the **Recommendation Layer** → Outcomes feed back into the **CRM Loop**.
@@ -134,7 +134,7 @@ CREDIX is **predictive**. It acts on signals, not events.
 
 ### 👥 Layer 2 — User, Role & Dashboard Architecture
 
-![CREDIX Dashboard Architecture](diagram-export-2-19-2026-11_42_30-PM.png)
+![CREDIX Dashboard Architecture](assets__/diagram-export-2-19-2026-11_42_30-PM.png)
 
 > **Reading the diagram:**
 > The **CXO** monitors portfolio health via the Executive Dashboard. The **Risk Analytics Team** operates two dashboards — the Risk Analyst Dashboard (strategy simulation, score distribution) and the Customer Analyst Dashboard (per-customer risk detail and intervention alerts). **Relationship Managers (RMs)** receive escalated cases and track them in the **Operations Dashboard** (intervention success, follow-up queue, actions required today). Meanwhile, **Customers** receive SMS/Mail/App alerts and flow into the **Customer Intervention Portal** → **Detailed Plan Page** → Accept/Reject — closing the loop back to the Operations Dashboard.
