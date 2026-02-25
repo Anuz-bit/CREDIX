@@ -1,0 +1,42 @@
+
+Evaluating Models on Final Test Set...
+
+Model: Logistic Regression
+Accuracy: 89.08%
+Precision: 0.8906
+Recall: 0.8909
+F1 Score: 0.8903
+ROC-AUC: 0.9758
+
+Model: Random Forest
+Accuracy: 90.32%
+Precision: 0.9039
+Recall: 0.9033
+F1 Score: 0.9033
+ROC-AUC: 0.9792
+
+Model: XGBoost
+Accuracy: 92.05%
+Precision: 0.9208
+Recall: 0.9206
+F1 Score: 0.9203
+ROC-AUC: 0.9870
+
+Model: Voting Ensemble
+Accuracy: 91.90%
+Precision: 0.9196
+Recall: 0.9191
+F1 Score: 0.9190
+ROC-AUC: 0.9847
+
+============================================================
+FINAL COMPARISON TABLE
+============================================================
+              Model Accuracy (%) Precision Recall     F1 ROC-AUC
+Logistic Regression       89.08%    0.8906 0.8909 0.8903  0.9758
+      Random Forest       90.32%    0.9039 0.9033 0.9033  0.9792
+            XGBoost       92.05%    0.9208 0.9206 0.9203  0.9870
+    Voting Ensemble       91.90%    0.9196 0.9191 0.9190  0.9847
+============================================================
+
+Best Overall Model: XGBoost

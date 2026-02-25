@@ -1,0 +1,202 @@
+/* Global Theme: Navy Blue (#0A1F44) & White - Minimal Banking */
+:root {
+    --primary-color: #0A1F44;
+    /* Deep Navy */
+    --secondary-color: #5da4d6;
+    /* Soft Blue */
+    --background-color: #F4F7FC;
+    /* Light Grey-Blue BG */
+    --card-bg: #FFFFFF;
+    --text-primary: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --border-color: #ecf0f1;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #c0392b;
+
+    /* Premium Gradients */
+    --gradient-danger: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(192, 57, 43, 0) 100%);
+    --gradient-warning: linear-gradient(135deg, rgba(243, 156, 18, 0.1) 0%, rgba(243, 156, 18, 0) 100%);
+    --gradient-success: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(39, 174, 96, 0) 100%);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- SIDEBAR & LAYOUT (Restored) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 1000;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin-left: 18rem;
+    padding: 2rem;
+    min-height: 100vh;
+    transition: margin-left .3s;
+}
+
+/* Sidebar Links */
+.nav-pills .nav-link {
+    color: #aab7c4;
+    /* Light grey for inactive */
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-pills .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(93, 164, 214, 0.3);
+}
+
+/* --- ANIMATIONS & COMPONENTS --- */
+
+/* Glassmorphism Panel (Optional use) */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    border-radius: 12px;
+}
+
+/* Premium Buttons */
+.btn-scenario {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-scenario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-scenario.active {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    /* Soft glow */
+    transform: translateY(-1px);
+    font-weight: 600;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Specific Active Colors */
+.btn-outline-danger.active {
+    background-color: #fff5f5;
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.2);
+}
+
+.btn-outline-warning.active {
+    background-color: #fef9e7;
+    color: #d35400;
+    /* Darker orange for text */
+    border-color: var(--warning-color);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.2);
+}
+
+.btn-outline-success.active {
+    background-color: #eafaf1;
+    color: var(--success-color);
+    border-color: var(--success-color);
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.2);
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+    /* Logic handled in JS, but class needed for targeting */
+    font-variant-numeric: tabular-nums;
+}
+
+/* KPI Cards */
+.kpi-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* Graph Container */
+.graph-container {
+    border-radius: 12px;
+    overflow: hidden;
+    background: transparent;
+    /* Let glass/plot bg show */
+}
+
+/* Plotly Overrides */
+.js-plotly-plot .plotly .modebar {
+    display: none !important;
+}
+
+/* Utility */
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.text-secondary {
+    color: #7f8c8d !important;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}

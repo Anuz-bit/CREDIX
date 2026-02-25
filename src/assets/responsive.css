@@ -1,0 +1,38 @@
+/* Sidebar Responsive Behavior */
+@media (max-width: 768px) {
+    /* Sidebar becomes an overlay on mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1050; /* Above everything */
+        width: 18rem;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Content wrapper takes full width on mobile */
+    .content {
+        margin-left: 0 !important; /* Override inline styles from Dash */
+        width: 100%;
+        padding-top: 60px; /* Space for sticky header if needed */
+    }
+    
+    /* Toggle button visibility */
+    #btn-sidebar-toggle {
+        display: block !important;
+    }
+}
+
+/* General Utilities */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    h2, .h2 { font-size: 1.5rem; }
+    h3, .h3 { font-size: 1.3rem; }
+    h4, .h4 { font-size: 1.2rem; }
+    h5, .h5 { font-size: 1.1rem; }
+}
